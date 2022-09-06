@@ -1,0 +1,41 @@
+
+import { db } from "./firebase-config";
+
+
+import { collection,
+    getDocs,
+    getDoc,
+    addDoc,
+    updateDoc,
+    deleteDoc,
+    doc} from "firebase/firestore";
+
+
+    const AdminCollectionRef = collection( db,"rooms");
+    class AdminDetailservice {
+
+        AddRoom=(newRoom) => {
+            return addDoc (AdminCollectionRef,newRoom);
+
+        };
+        updateRoom = (id,updatedroom) => {
+            const roomsdetails = doc ( db,"rooms",id);
+            return updateDoc(roomsdetails,updatedroom);
+
+        };
+        deleteRoom= (id) => {
+            const roomsdetails = doc(db,"rooms",id);
+            return deleteDoc(roomsdetails);
+        };
+
+        getAllRooms = () => {
+            return getDocs(EmployeeCollectionRef);
+        };
+        getRooms= (id) => {
+            const roomsdetails = doc (db,"rooms",id);
+            return getDoc(roomsdetails);
+
+        };
+    }
+
+    export default  new AdminDetailservice();
