@@ -1,4 +1,5 @@
 import React from "react";
+import {Link, Route} from 'react-router-dom'
 import { useNavigate} from 'react-router-dom'
 import AddRoom from "./addroom";
 import DisplayRoom from "./displayRoom";
@@ -6,12 +7,12 @@ import DisplayRoom from "./displayRoom";
 
 
 
-function Home(props) {
+function Home() {
 
     return(
         <div>
-           <h1> HOME</h1>
-            
+           <h1> HOME PAGE</h1>
+   
        
                     
       

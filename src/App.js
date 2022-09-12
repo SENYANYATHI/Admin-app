@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes ,Route } from 'react-router-dom';
-import Navbar from './components/navbar';
 import AddRoom from './components/addroom';
 import Home from './components/home';
 import { useState } from 'react';
+import SignIn from './components/login';
+import DisplayRoom from './components/displayRoom';
+import Search from './components/search';
 
 
 function App() {
@@ -34,8 +36,13 @@ console.log(Services)
     <BrowserRouter>
     <Routes>
 
+    <Route exact path='/' element={<SignIn/>}/>
+    <Route path='search' element={<Search/>}/>
+
+     <Route path='/add' element={<AddRoom/>}/>
+     <Route path='/list' element={<DisplayRoom/>} list={<addRoom/>}/>
     
-     <Route path='/' element={<AddRoom/>}/>
+   
   
      
    

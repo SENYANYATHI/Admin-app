@@ -32,9 +32,7 @@ function DisplayRoom (getRoomsId) {
 
 <>
 <div className="mb-2">
-    <button variant="dark edit" onClick={getRoomsId }>
-        REFRESH LIST
-        </button>
+ 
 
 </div>
 
